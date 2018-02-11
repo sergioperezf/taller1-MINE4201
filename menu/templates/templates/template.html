@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Talleres MINE4201 grupo 2 Uniandes MINE 2018-I">
+    <meta name="author" content="David Bonilla, Sergio Pérez y José Ramírez">
+    <title>Talleres MINE4201 Grupo 2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% load staticfiles %}
+    <link rel="icon" href="{% static 'img/favicon/favicon.ico' %}">
+    <link href="{% static 'css/jumbotron.css' %}" rel="stylesheet">
+    <link href="{% static 'css/grupo_2.css' %}" rel="stylesheet">
+    {% block estilos %}
+    {% endblock %}
+  </head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsTop">
+      <ul class="navbar-nav mr-auto">
+		<li class="nav-item">
+		  <a class="nav-link" href="menu"><span class="text-bold">HOME</span><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Integrantes</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown02">
+            <a class="dropdown-item" href="https://www.linkedin.com/in/david-bonilla-57093326" target="_blank">David Bonilla</a>
+			<a class="dropdown-item" href="https://www.linkedin.com/in/sergio-perez-7a511733" target="_blank">Sergio Pérez</a>
+			<a class="dropdown-item" href="#" target="_blank">José Ramírez</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Talleres</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="taller_1">Taller 1</a>
+          </div>
+        </li>
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sitios relevantes</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown03">
+            <a class="dropdown-item" href="https://github.com/sergioperezf/taller1-MINE4201" target="_blank">Ir a Github del proyecto</a>
+			<a class="dropdown-item" href="https://sistemas.uniandes.edu.co/es/mine" target="_blank">Ir a página de MINE</a>
+            <a class="dropdown-item" href="https://sicuaplus.uniandes.edu.co/" target="_blank">Ir a Sicua+</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  {% block jumbotron %}
+  {% endblock %}
+  <div class="container">
+    <div class="row">
+      {% block talleres %}
+      {% endblock %}
+    </div>
+    <hr />
+    <footer>
+      <p class="text-center"><a href="https://www.linkedin.com/in/david-bonilla-57093326" target="_blank">David Bonilla</a> | <a href="https://www.linkedin.com/in/sergio-perez-7a511733" target="_blank">Sergio Pérez</a> | <a href="#" target="_blank">José Ramírez</a></p>
+    </footer>
+  </div>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	{% block librerias %}
+	{% endblock %}
+</body>
+</html>

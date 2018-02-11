@@ -1,0 +1,32 @@
+{% extends "templates/template.html" %}
+{% block jumbotron %}
+	<div class="jumbotron">
+		<div class="container">
+{% load staticfiles %}
+			<div class="row bajar-margin">
+				<div class="col-md-4">
+					<img class="d-block w-100" src="{% static 'img/logos/uniandes.png' %}">
+				</div>
+				<div class="col-md-8 text-center">
+					<h2>Maestría en Ingeniería de la Información</h2>
+					<h2>MINE4201: Sistemas de Recomendación</h2>
+					<h2>Período 2018-I - Grupo 02</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+{% block talleres %}
+	<div class="col-md-12">
+		<h2>Taller 1</h2>
+		<p class="text-justify"><span class="text-bold">Parte 1: </span>Utilizar el dataset disponible en <a target="_blank" href="http://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html">"Music Recommendation Datasets for Research"
+</a> y realizar predicciones utilizando modelos basados en:</p>
+		<ul>
+			<li>Índice de Jaccard</li>
+			<li>Distancias coseno</li>
+			<li>Correlación de Pearson</li>
+		</ul>
+		<p>Comparar los resultados con los obtenidos del Dataset cambiando el conjunto de vecinos y el tamaño de los datos iniciales.</p>
+		<p><a class="btn btn-primary btn-lg" href="taller_1" role="button">Entrar &raquo;</a></p>
+    </div>
+{% endblock %}

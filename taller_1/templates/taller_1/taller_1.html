@@ -1,0 +1,21 @@
+{% extends "templates/template.html" %}
+{% block estilos %}
+    {% load staticfiles %}
+{% endblock %}
+{% block jumbotron %}
+{% endblock %}
+{% block talleres %}
+	<div class="col-md-12 bajar-margin">
+		<h2>Taller 1 parte 1: Modelos colaborativos</h2>
+		<p><a target="_blank" href="{% static 'docs/taller_1.pdf' %}">Ver el enunciado del taller</a></p>
+	</div>
+	<div class="col-md-8">
+		<form method="post">
+        	aquí empieza el taller
+      	</form>
+	</div>
+{% endblock %}
+{% block librerias %}
+  <script src="{% static 'js/anti_csrf.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
