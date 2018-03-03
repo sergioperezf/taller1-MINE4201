@@ -11,7 +11,11 @@
 	</div>
 	<div class="col-md-8">
 		<form method="post">
-        	aquí empieza el taller
+        	<select name="artists" multiple class="form-control">
+				{% for artist in artists %}
+				<option value="{{artist.id}}">{{artist.name}}</option>
+				{% endfor %}
+			</select>
       	</form>
 	</div>
 {% endblock %}
