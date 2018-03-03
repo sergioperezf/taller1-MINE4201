@@ -24,6 +24,9 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+bin/
+include/
+pip-selfcheck.json
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -99,3 +102,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Visual Studio Code
+.vscode/
