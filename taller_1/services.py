@@ -5,3 +5,6 @@ def get_possible_artists():
 		{'id': 1, 'name': 'Artist 1'},
 		{'id': 2, 'name': 'Artist 2'}
 		]}
+
+def get_recommendation_by_artists(artists):
+    return {'id': 2, 'name': 'AC/DC'}
