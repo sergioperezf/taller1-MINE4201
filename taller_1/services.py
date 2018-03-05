@@ -14,14 +14,16 @@ def get_possible_artists():
     a_list.sort()
     return a_list
 
-def get_recommendation_by_artists(artists):
+def get_recommendation_by_artists(artists, rankings):
+    if (not len(artists)):
+        return {}
     dataset = load_dataset()
 
     dataset_4_test = dataset.copy(deep = True)
     data = {
             'USERID': ['user_001001' for x in artists],
             'ARTIST_NAME': artists,
-            'VALOR': [5 for x in artists]}
+            'VALOR': rankings}
     x = pd.DataFrame(data = data)
     dataset_4_test = dataset_4_test.append(x, ignore_index = True)
 
@@ -69,4 +71,8 @@ def get_recommendation_by_artists(artists):
 
     top_n = get_top_n(predictions, n = 10)
     top_n = dict(top_n)
-    return top_n['user_001001']
+    try:
+        return top_n['user_001001']
+    except KeyError:
+        print('recommendations not found')
+        return {}
