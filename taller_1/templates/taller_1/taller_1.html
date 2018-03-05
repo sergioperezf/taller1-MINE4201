@@ -11,12 +11,23 @@
 	</div>
 	<div class="col-md-8">
 		<form method="post">
-        	<select name="artists" multiple class="form-control">
+			{% csrf_token %}
+        	<select name="artists" multiple class="form-control" size="10">
 				{% for artist in artists %}
-				<option value="{{artist.id}}">{{artist.name}}</option>
+				<option value="{{artist}}">{{artist}}</option>
 				{% endfor %}
 			</select>
+			<br/>
+			<button type="submit" class="btn btn-success">Recomendar!</button>
       	</form>
+	</div>
+	<div class="col-md-4">
+		{% if recommendations %}
+		<h2>Artistas recomendados</h2>
+		{% for name, points in recommendations %}
+			<p>Creemos que le darás un puntaje de {{ points }} a {{ name }}.</p>
+		{% endfor %}
+		{% endif %}
 	</div>
 {% endblock %}
 {% block librerias %}

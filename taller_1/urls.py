@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.index, name = 'index'),
+	url('notebook', views.notebook, name = 'notebook'),
 ]
