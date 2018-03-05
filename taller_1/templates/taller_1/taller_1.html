@@ -6,12 +6,13 @@
 {% endblock %}
 {% block talleres %}
 	<div class="col-md-12 bajar-margin">
-		<h2>Taller 1 parte 1: Modelos colaborativos</h2>
+		<h2>Taller 1</h2>
 		<p><a target="_blank" href="{% static 'docs/taller_1.pdf' %}">Ver el enunciado del taller</a></p>
 	</div>
 	<div class="col-md-8">
 		<form method="post">
 			{% csrf_token %}
+			Selecciona los artistas en los que deseas basar tu recomendación:
         	<select name="artists" multiple class="form-control" id="artists" size="10">
 				{% for artist in artists %}
 				<option value="{{artist}}">{{artist}}</option>
@@ -21,6 +22,7 @@
 			<div id="custom-rakings">
 
 			</div>
+			<br/>
 			<button type="submit" class="btn btn-success">Recomendar!</button>
       	</form>
 	</div>
